@@ -5,6 +5,7 @@
  */
 package revisao;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -29,7 +30,12 @@ public class Revisao {
         String texto;//aceita tudo em formato texto
         String textoCurto;
         char sexo;
-
+        int vet[] = {1,2,3}; //as posições começam em zero
+        ArrayList<Integer> valores = new ArrayList<>();
+        valores.add(1);
+        valores.add(2);
+        valores.add(3);
+        valores.add(4);
 
         System.out.println("Revisão manhã");
         System.out.println("Informe um numero inteiro: ");
@@ -69,6 +75,22 @@ public class Revisao {
         }else{
             System.out.println("num2 é maior que num1.");
         }
+        System.out.println("vetor");
+        for (int i = 0; i < vet.length; i++) {
+            System.out.println("Posição: "+ i +"| valor:" + vet[i]);
+        }
+        System.out.println("ArrayList");
+         for (int i = 0; i < valores.size(); i++) {
+         System.out.println("Posição: " + i + " | Valor: " + valores.get(i));
+
+        }
+        System.out.println("ArrayList-Impressão 2");
+        valores.forEach((i) -> System.out.println(i));
+        
+        System.out.println("ArrayList-Impressão 3");
+        valores.forEach(_item -> {
+      System.out.println(" Valor: " + valores.toString());
+         });
     }
 
 }
